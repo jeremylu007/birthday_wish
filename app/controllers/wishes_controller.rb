@@ -1,3 +1,4 @@
+#encoding:utf-8
 class WishesController < ApplicationController
 
   def new
@@ -8,9 +9,9 @@ class WishesController < ApplicationController
 
   def create
     @wish = Wish.new(params[:wish])
-    @wish.save
+    Wish.to_save(@wish)
     @imageIds = Wish.all.map(&:imageId)
-    flash[:success] = @wish.wisher + ", Thanks!"
+    flash[:success] = "#{@wish.wisher}, 谢谢你的祝福！"
     redirect_to root_path
   end
 
