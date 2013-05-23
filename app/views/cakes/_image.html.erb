@@ -1,0 +1,18 @@
+<%
+    if(@imageIds.include?(name))
+%>
+<%= image_tag("cakes/" + name + ".jpg",
+              :id => name, :alt => name,
+              :onmouseover => "getLocation(event), showWish(this.id)",
+              :onmouseout => "closeWish(this.id)")
+          %>
+
+          <%
+        else
+    %>
+    <a href="/wishes/new?imageId=<%= name %>">
+        <%= image_tag("cakes_gray/g" + name.from(1) + ".jpg",
+                      :onclick => "/wishes/new?imageId="+name,
+                      :id => name, :alt => name) %>
+                  </a>
+              <% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  wisher: MyString
+  wish_msg: MyString
+  imageId: MyString
+
+two:
+  wisher: MyString
+  wish_msg: MyString
+  imageId: MyString

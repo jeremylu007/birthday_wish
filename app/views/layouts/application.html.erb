@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Birthday</title>
+        <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+        <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+        <%= stylesheet_link_tag  'custom', :media => 'screen' %>
+        <%= stylesheet_link_tag 'wishnew' %>
+        <%= javascript_include_tag "cufon-yui" %>
+        <%= javascript_include_tag "application" %>
+        <%= javascript_include_tag "Pristina_400.font" %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body style="<%= show_user_bg %>">
+        <% if !(flash.empty?) %>
+            <section class="round">
+            <% flash.each do |key, value| %>
+                <%= content_tag(:div, value, :class => "flash #{key}", :style => "width: 130px; text-align: center") %>
+            <% end %>
+            </section>
+        <% end %>
+
+        <%= yield %>
+
+    </body>
+</html>

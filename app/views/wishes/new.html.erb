@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    Cufon.replace('h1');
+    Cufon.replace('.contact_row label');
+    </script>
+
+    <div id="main_container">
+
+
+        <div class="contact_form">
+
+            <%= form_for(@wish) do |f| %>
+
+                <div class="field">
+                    <%= f.hidden_field :imageId, :value => @imageId %>
+                </div>
+
+
+                <div class="contact_row">
+                    <label>your name:</label>
+                    <%= f.text_field :wisher, :class => "contact_input" %>
+                </div>
+
+                <div class="contact_row">
+                    <label>your wish:</label>
+                    <%= f.text_area :wish_msg, :class => "contact_textarea" %>
+                </div> 
+
+                <div class="actions" >
+
+                    <div class="contact_row">
+                        <%= f.submit " ", :class => "sub_button" %>
+                    </div>
+                </div>
+            <% end %>
+        </div> 
+    </div>

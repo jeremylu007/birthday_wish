@@ -1,0 +1,22 @@
+<div class="baseImage">
+    <%
+        (0..20).each do |i|
+            (0..19).each do |j|
+                name = "c_" + sprintf("%02d", i) + "x" + sprintf("%02d", j)
+
+                if(name == "c_13x14")
+                    (1..5).each do |k|
+                        name1 = name + "_" + k.to_s
+                    %>
+                    <%= render 'image', :name => name1 %>
+                    <%
+                    end
+                else
+            %>
+            <%= render 'image', :name => name %>
+            <%
+                end
+            end
+        end
+    %>
+</div>

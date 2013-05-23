@@ -1,0 +1,67 @@
+/* image style */
+
+div.baseImage {
+    width: 1370px;
+    height: 1049px;
+}
+
+/* 展示内容位置设置 */
+div#wishShow {
+    position: relative;
+    left: 23px;
+    top: 70px;
+    width: 170px;
+}
+
+div.field {
+    text-align: center;
+}
+
+div.actions {
+    text-align: center;
+}
+/*小图片设置 */
+img {
+    float: left;
+}
+
+img:hover {
+    outline: red dotted
+}
+
+/* flash提示窗口设置 */
+
+.round {
+    -moz-border-radius:    10px;
+    -webkit-border-radius: 10px;
+    border-radius:         10px;
+}
+
+section {
+    margin-top: 1em;
+    font-size: 120%;
+    padding: 20px;
+    background: #fff;
+}
+
+section h1 {
+    font-size: 200%;
+}
+
+/* font style */
+
+label.rounded {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-top: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+p.wish_msg {
+    text-indent: 2em;
+}
+
+p.wisher {
+    text-align: right;
+}
