@@ -15,7 +15,7 @@
         <% if !(flash.empty?) %>
             <section class="round">
             <% flash.each do |key, value| %>
-                <%= content_tag(:div, value, :class => "flash #{key}", :style => "width: 130px; text-align: center") %>
+                <%= content_tag(:div, value, :class => "flash #{key}", :style => "text-align: center") %>
             <% end %>
             </section>
         <% end %>

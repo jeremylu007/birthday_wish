@@ -3,6 +3,7 @@
 div.baseImage {
     width: 1370px;
     height: 1049px;
+    margin: 13px;
 }
 
 /* 展示内容位置设置 */
@@ -32,7 +33,7 @@ img:hover {
 /* flash提示窗口设置 */
 
 .round {
-    -moz-border-radius:    10px;
+    -moz-border-radius:    20px;
     -webkit-border-radius: 10px;
     border-radius:         10px;
 }
