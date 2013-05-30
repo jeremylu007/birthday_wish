@@ -53,3 +53,34 @@ function getLocation(event) {
         y = y - to_y - 100 - win_height;
     }
 }
+
+//提交祝福信息前进行确认内容是否为空，并给出相应提示
+function submit_confirm() {
+    notice_msg = "";
+    var your_name = document.getElementById("your_name").value.trim();
+    var your_wish = document.getElementById("your_wish").value.trim();
+    if((your_name == '') || (your_wish == '')) {
+        if(your_name == '') {
+            notice_msg += "未填写姓名, ";
+        }
+        if(your_wish == '') {
+            notice_msg += "未填写祝福语, ";
+        }
+        return confirm(notice_msg + "确定提交？");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -8,7 +8,7 @@
 
         <div class="contact_form">
 
-            <%= form_for(@wish) do |f| %>
+            <%= form_for @wish, :html => { :onsubmit => "return submit_confirm()" } do |f| %>
 
                 <div class="field">
                     <%= f.hidden_field :imageId, :value => @imageId %>
@@ -17,12 +17,12 @@
 
                 <div class="contact_row">
                     <label>your name:</label>
-                    <%= f.text_field :wisher, :class => "contact_input" %>
+                    <%= f.text_field :wisher, :class => "contact_input", :id => "your_name" %>
                 </div>
 
                 <div class="contact_row">
                     <label>your wish:</label>
-                    <%= f.text_area :wish_msg, :class => "contact_textarea" %>
+                    <%= f.text_area :wish_msg, :class => "contact_textarea", :id => "your_wish"  %>
                 </div> 
 
                 <div class="actions" >
